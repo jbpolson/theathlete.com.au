@@ -1,0 +1,231 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #F5F5F5;
+    --color-text: #0000FF;
+    --padding-desktop: 6rem;
+    --padding-mobile: 2rem;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Kin Grotesque Std', sans-serif;
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+main {
+    flex: 1 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    background: var(--color-background);
+}
+
+.hero__title {
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 700;
+}
+
+.hero__title-line {
+    display: block;
+    line-height: 0.9;
+}
+
+/* Introduction Section */
+.intro {
+    padding: 6rem;
+    padding-right: 25%;
+    background: var(--color-background);
+}
+
+.intro__text {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 100%;
+}
+
+/* Waitlist Section */
+.waitlist {
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    background: var(--color-background);
+}
+
+.waitlist__button {
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 700;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.waitlist__container {
+    display: flex;
+    align-items: center;
+}
+
+.waitlist__input {
+    font-family: 'Kin Grotesque Std', sans-serif;
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 700;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0;
+}
+
+.waitlist__input::placeholder {
+    color: var(--color-text);
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 6rem;
+    background: var(--color-background);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 700;
+}
+
+.footer__links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer__link {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer__link:hover {
+    opacity: 0.8;
+}
+
+/* Base responsive adjustments */
+:root {
+    --padding-desktop: 6rem;
+    --padding-mobile: 2rem;
+}
+
+/* Adjust base section padding */
+@media (max-width: 768px) {
+    section {
+        padding: var(--padding-mobile);
+    }
+}
+
+/* Hero Section responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--padding-mobile);
+    }
+
+    .hero__title {
+        font-size: clamp(3rem, 15vw, 6rem);
+    }
+
+    .hero__title-line {
+        line-height: 1;
+    }
+}
+
+/* Introduction Section responsive */
+@media (max-width: 768px) {
+    .intro {
+        padding: var(--padding-mobile);
+        padding-right: var(--padding-mobile);
+    }
+
+    .intro__text {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        line-height: 1.3;
+    }
+}
+
+/* Waitlist Section responsive */
+@media (max-width: 768px) {
+    .waitlist {
+        padding: var(--padding-mobile);
+    }
+
+    .waitlist__button,
+    .waitlist__input {
+        font-size: clamp(3rem, 15vw, 6rem);
+    }
+
+    .waitlist__input {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--padding-mobile);
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Add meta viewport if not already present in HTML */
+@media (max-width: 480px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+/* Add specific about page styles */
+.about .intro {
+    padding-top: 10vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about .intro {
+        padding: var(--padding-mobile);
+    }
+    
+    .about .intro__text {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.4;
+    }
+} 
